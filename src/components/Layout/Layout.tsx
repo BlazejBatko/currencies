@@ -6,10 +6,12 @@ type Props = {};
 
 const Layout = (props: Props) => {
   return (
-    <div className="App">
+    <>
       <Header />
-      <Outlet />
-    </div>
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };
 

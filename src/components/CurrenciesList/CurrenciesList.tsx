@@ -6,8 +6,8 @@ type Props = {
 
 const CurrenciesList = ({ children }: Props) => {
   return (
-    <div className="xd">
-      <div className="currencies-list--container">{children}</div>;
+    <div className="currencies-list__wrapper">
+      <div className="currencies-list--container">{children}</div>
     </div>
   );
 };

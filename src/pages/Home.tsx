@@ -1,33 +1,12 @@
 import React, { useEffect, useState } from "react";
 import CurrenciesList from "../components/CurrenciesList/CurrenciesList";
-import CurrencyTile from "../components/CurrencyTile/CurrencyTile";
-import { Currencies } from "../Interfaces";
+import CurrencyTile from "../features/followed/CurrencyTile/CurrencyTile";
+import { Rate } from "../Interfaces";
 
-const Home = () => {
-  const [currencies, setCurrencies] = useState<Currencies>();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    const fetchCurrencies = async () => {
-      try {
-        const response = await fetch(
-          "http://api.nbp.pl/api/exchangerates/tables/A"
-        );
-        const data = await response.json();
-        setCurrencies(data[0]);
-      } catch (error: any) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchCurrencies();
-  }, []);
-
+const Home = ({ rates }: { rates: Rate[] }) => {
   const renderCurrencies = () => {
-    if (currencies && currencies.rates.length > 0) {
-      return currencies.rates.map((rate, index) => (
+    if (rates && rates.length > 0) {
+      return rates.map((rate) => (
         <div key={rate.code}>
           <CurrencyTile {...rate} key={rate.code} />
         </div>
@@ -37,11 +16,7 @@ const Home = () => {
 
   return (
     <>
-      {!isLoading ? (
-        <CurrenciesList>{renderCurrencies()}</CurrenciesList>
-      ) : (
-        <h1>Ładowanie danych</h1>
-      )}
+      <CurrenciesList>{renderCurrencies()}</CurrenciesList>
     </>
   );
 };

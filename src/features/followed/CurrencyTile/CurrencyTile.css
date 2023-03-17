@@ -47,8 +47,7 @@
 }
 
 /* Buttons */
-.btn,
-.currency-tile__btn--favorite {
+.currency-tile__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,4 +66,18 @@
 }
 .currency-tile__btn--favorite:active {
   background-color: #aa1111c7;
+}
+
+.modal__buttons-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.modal__button--confirm, .modal__button--cancel {
+
+  padding: .25rem 1rem;
+  background-color: #014e0e;
+  color: #048f18;
+  border: none;
+  font-size: 1.5rem;
 }
