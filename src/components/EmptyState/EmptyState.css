@@ -1,0 +1,26 @@
+.empty-state__container {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 2rem;
+  padding: 4rem;
+  text-align: center;
+}
+.empty-state__emoji {
+  font-size: 5rem;
+}
+
+.empty-state__btn {
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .empty-state__emoji {
+    font-size: 3rem;
+  }
+}

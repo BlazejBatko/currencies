@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #9d8fd8;
+  --primary-color-shade: #bbb6d47c;
+  --secondary-color: #2f2746;
+  
+  --text-color: #ffffff;
+  --light-grey: #979797;
+  --bg-color: #121218;
+  --bg-color-lighter: #16141a;
+
+  --color-success: #127712b4;
+  --color-success-shade: #082b08;
+  --color-warning: #854e48;
+  --color-warning-shade: #522c28;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
