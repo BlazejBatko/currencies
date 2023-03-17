@@ -12,8 +12,8 @@
 
 .empty-state__btn {
   padding: 1rem 2rem;
-  background-color: var(--);
-  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;

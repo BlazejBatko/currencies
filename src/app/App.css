@@ -1,11 +1,10 @@
 :root {
-  --primary-color: #534883;
+  --primary-color: #9d8fd8;
   --primary-color-shade: #bbb6d47c;
   --secondary-color: #2f2746;
   
   --text-color: #ffffff;
   --light-grey: #979797;
-  /* --text-color-gradient:  */
   --bg-color: #121218;
   --bg-color-lighter: #16141a;
 
@@ -22,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
-button {
-  cursor: pointer;
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,12 +1,11 @@
 .currency-tile--container {
-  font-family: "Open Sans", sans-serif;
-  padding: 1rem 1.5rem;
-  border: 1px solid var(--primary-color-shade);
-  background-color: var(--bg-color-lighter);
-  border-radius: 99999px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--primary-color-shade);
+  background-color: var(--bg-color-lighter);
+  border-radius: 999px;
   max-width: 450px;
 }
 .currency-tile--header {
@@ -56,11 +55,25 @@
   border: none;
 }
 
+.currency-tile__btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.currency-tile__btn:active {
+  transform: scale(1.04);
+}
+
 .followed {
   background-color: var(--color-warning);
   color: var(--color-warning-shade);
   display: flex;
   justify-content: center;
+}
+
+.followed:hover {
+  background-color: var(--color-warning-shade);
+  color: var(--color-warning);
 }
 
 .modal__buttons-container {

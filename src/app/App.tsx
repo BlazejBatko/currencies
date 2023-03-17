@@ -10,6 +10,9 @@ import Home from "../pages/Home";
 import "./App.css";
 import { useEffect, useState } from "react";
 import { Rate } from "../Interfaces";
+import NotFound from "../pages/NotFound";
+import Spinner from "../components/Spinner/Spinner";
+import ErrorDisplay from "../components/ErrorDisplayer/ErrorDisplayer";
 function App() {
   const [rates, setCurrencies] = useState<Rate[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -25,7 +28,6 @@ function App() {
         setCurrencies(data[0].rates);
       } catch (error: any) {
         console.log(error);
-        throw new Error(error);
       } finally {
         setIsLoading(false);
       }
@@ -35,15 +37,17 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />} errorElement={<h1> error</h1>}>
+      <Route path="/" element={<Layout />} errorElement={<ErrorDisplay />}>
         <Route index element={<Home rates={rates} />} />,
         <Route path="followed" element={<FollowedCurrencies />} />,
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
 
   return (
     <>
+      {isLoading ? <Spinner /> : null}
       <RouterProvider router={router} />
     </>
   );
