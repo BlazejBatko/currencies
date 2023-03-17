@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.currency-tile--container {
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 99999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 1px solid var(--text-color);
+  max-width: 450px;
+}
+.currency-tile--header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.currency-tile__details {
+  min-width: 350px;
+}
+
+/* Fonts */
+
+.currency-tile--code {
+  font-style: italic;
+  min-width: 70px;
+}
+
+.currency-tile--code,
+.currency-tile--value {
+  font-size: 1.6875rem;
+  font-weight: bold;
+}
+
+.currency-tile--name {
+  font-size: 0.875rem;
+}
+
+.line {
+  margin-right: 1rem;
+  width: 30%;
+  height: 1px;
+  background-color: var(--light-grey);
+}
+
+/* Buttons */
+.btn,
+.currency-tile__btn--favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #014e0e;
+  color: #048f18;
+  border: none;
+  font-size: 2rem;
+}
+
+.currency-tile__btn--favorite:hover {
+  background-color: #17441e;
+  color: var(--primary-color);
+}
+.currency-tile__btn--favorite:active {
+  background-color: #aa1111c7;
+}

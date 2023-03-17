@@ -1,0 +1,12 @@
+.currencies-list--container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+  row-gap: 2rem;
+  justify-items: center;
+  align-content: space-between;
+}
+
+.xd {
+  max-width: 1300px;
+  margin: 0 auto;
+}

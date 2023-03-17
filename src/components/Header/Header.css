@@ -1,0 +1,22 @@
+.header__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 3rem 0;
+}
+
+.header__container {
+  background-color: #292424;
+  margin-bottom: 3rem;
+}
+
+.a-button {
+  background-color: #292424;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 99999px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
