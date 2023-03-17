@@ -16,6 +16,10 @@
 
 .currency-tile__details {
   min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 /* Fonts */
@@ -58,10 +62,6 @@
 .currency-tile__btn:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-}
-
-.currency-tile__btn:active {
-  transform: scale(1.04);
 }
 
 .followed {
