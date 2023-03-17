@@ -26,7 +26,6 @@ const currencySlice = createSlice({
 
 export const { followCurrency, unfollowCurrency, clearFollowedCurrencies } =
   currencySlice.actions;
-
 export const selectFollowedCurrencies = (state: RootState) =>
   state.followedCurrencies;
 

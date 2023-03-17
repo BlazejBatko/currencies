@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { Rate } from "../Interfaces";
 import NotFound from "../pages/NotFound";
 import Spinner from "../components/Spinner/Spinner";
-import ErrorDisplay from "../components/ErrorDisplayer/ErrorDisplayer";
+import ErrorDisplay from "../components/ErrorDisplay/ErrorDisplay";
 function App() {
   const [rates, setCurrencies] = useState<Rate[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);

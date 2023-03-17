@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CurrenciesList from "../components/CurrenciesList/CurrenciesList";
 import CurrencyTile from "../features/followed/CurrencyTile/CurrencyTile";
 import { Rate } from "../Interfaces";

@@ -1,13 +1,12 @@
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { Rate } from "../../../Interfaces";
 import { followCurrency, unfollowCurrency } from "./currencySlice";
-import { useState } from "react";
 import "./CurrencyTile.css";
 import useModal from "../../../hooks/useModal";
 import CustomModal from "../../../components/Modal/CustomModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
+import { useAppDispatch } from "../../../hooks/useAppDispatch";
+import { useAppSelector } from "../../../hooks/useAppSelector";
 type Props = {
   code: string;
   currency: string;

@@ -1,5 +1,4 @@
 import React from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
 import CurrenciesList from "../components/CurrenciesList/CurrenciesList";
 import CustomModal from "../components/Modal/CustomModal";
 import EmptyState from "../components/EmptyState/EmptyState";
@@ -7,6 +6,8 @@ import { clearFollowedCurrencies } from "../features/followed/CurrencyTile/curre
 import CurrencyTile from "../features/followed/CurrencyTile/CurrencyTile";
 import useModal from "../hooks/useModal";
 import CustomButton from "../components/Button/CustomButton";
+import { useAppDispatch } from "../hooks/useAppDispatch";
+import { useAppSelector } from "../hooks/useAppSelector";
 
 type Props = {};
 
