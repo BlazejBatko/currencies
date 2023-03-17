@@ -3,7 +3,6 @@ button {
   border: none;
   outline: none;
   padding: 0.25rem 2rem;
-  transition: all 0.2s ease-in-out;
   box-shadow: 2px 8px 10px 0 rgb(0, 0, 0, 0.2);
 }
 
@@ -20,14 +19,14 @@ button {
   font-size: 2rem;
   justify-content: center;
   align-items: center;
-  
 }
 
 .followed-currencies__btn-clear:hover {
-  transform: scale(1.01)
+  transform: scale(1.01);
 }
 
-.modal__button--reject, .modal__button--accept {
+.modal__button--reject,
+.modal__button--accept {
   background-color: var(--);
   display: flex;
   font-size: 2rem;

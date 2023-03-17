@@ -16,6 +16,10 @@
 
 .currency-tile__details {
   min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 /* Fonts */
@@ -33,6 +37,7 @@
 
 .currency-tile--name {
   font-size: 0.875rem;
+
 }
 
 .line {
@@ -60,10 +65,6 @@
   color: var(--secondary-color);
 }
 
-.currency-tile__btn:active {
-  transform: scale(1.04);
-}
-
 .followed {
   background-color: var(--color-warning);
   color: var(--color-warning-shade);
@@ -89,7 +90,11 @@
 
   .currency-tile--code,
   .currency-tile--value {
-    font-size: 1rem;
+    font-size: 1.250em;
+  }
+
+  .currency-tile--name {
+    max-width: 160px;
   }
 
   .line {
