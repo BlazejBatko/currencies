@@ -37,6 +37,7 @@
 
 .currency-tile--name {
   font-size: 0.875rem;
+
 }
 
 .line {
@@ -89,7 +90,11 @@
 
   .currency-tile--code,
   .currency-tile--value {
-    font-size: 1rem;
+    font-size: 1.250em;
+  }
+
+  .currency-tile--name {
+    max-width: 160px;
   }
 
   .line {
