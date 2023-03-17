@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../Button/CustomButton";
 import "./CustomModal.css";
 type Props = {
   isActive: boolean;
@@ -28,17 +29,21 @@ const CustomModal = ({
     : "modal display-none";
   return (
     <div className={showHideClassName}>
-      <section className="modal--background" onClick={handleClose}>
+      <section className="modal--background" >
         <div className="modal__content">
           <span className="modal__title">{title}</span>
           <div className="modal__body">{children}</div>
           <div className="modal__buttons-container">
-            <button className="modal__button--accept" onClick={onAccept}>
-              {acceptText}
-            </button>
-            <button className="modal__button--reject" onClick={onReject}>
-              {rejectText}
-            </button>
+            <CustomButton
+              customClassName="modal__button--accept"
+              callback={onAccept}
+              content={"Continue"}
+            />
+            <CustomButton
+              customClassName="modal__button--reject"
+              callback={onReject}
+              content={"Cancel"}
+            />
           </div>
         </div>
       </section>

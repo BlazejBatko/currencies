@@ -6,7 +6,8 @@ import { useState } from "react";
 import "./CurrencyTile.css";
 import useModal from "../../../hooks/useModal";
 import CustomModal from "../../../components/Modal/CustomModal";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
 type Props = {
   code: string;
   currency: string;
@@ -37,6 +38,7 @@ const CurrencyTile = (props: Props) => {
 
   const onUnfollowCurrencyClicked = () => {
     dispatch(unfollowCurrency(props.code));
+    modal.handleClose()
   };
 
   return (
@@ -62,8 +64,15 @@ const CurrencyTile = (props: Props) => {
           </div>
           <i className="currency-tile--name">{props.currency}</i>
         </div>
-        <button className="currency-tile__btn " onClick={handleButtonClick}>
-          {isFollowed ? "-" : "+"}
+        <button
+          className={`currency-tile__btn ${isFollowed && "followed"}`}
+          onClick={handleButtonClick}
+        >
+          {isFollowed ? (
+            <FontAwesomeIcon icon={faX} />
+          ) : (
+            <FontAwesomeIcon icon={faPlus} />
+          )}
         </button>
       </div>
     </>

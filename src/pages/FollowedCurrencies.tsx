@@ -6,6 +6,7 @@ import EmptyState from "../components/EmptyState/EmptyState";
 import { clearFollowedCurrencies } from "../features/followed/CurrencyTile/currencySlice";
 import CurrencyTile from "../features/followed/CurrencyTile/CurrencyTile";
 import useModal from "../hooks/useModal";
+import CustomButton from "../components/Button/CustomButton";
 
 type Props = {};
 
@@ -43,16 +44,15 @@ const FollowedCurrencies = (props: Props) => {
         }}
       >
         <span>
-          You are going to remove <u>ALL OF YOUR FOLLOWED CURRENCIES</u>
+          You are going to remove <br /> <u>ALL OF YOUR FOLLOWED CURRENCIES</u>
         </span>
       </CustomModal>
       {followedCurrencies.length > 1 && (
-        <button
-          className="followed-currencies__btn-clear"
-          onClick={() => displayModal()}
-        >
-          clear
-        </button>
+        <CustomButton
+          callback={() => displayModal()}
+          customClassName="followed-currencies__btn-clear"
+          content={"🗑️"}
+        />
       )}
 
       <CurrenciesList>{renderFollowedCurrencies()}</CurrenciesList>

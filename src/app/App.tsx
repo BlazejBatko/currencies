@@ -9,7 +9,7 @@ import FollowedCurrencies from "../pages/FollowedCurrencies";
 import Home from "../pages/Home";
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Currencies, Rate } from "../Interfaces";
+import { Rate } from "../Interfaces";
 function App() {
   const [rates, setCurrencies] = useState<Rate[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);

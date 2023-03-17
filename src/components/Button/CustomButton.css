@@ -1,0 +1,47 @@
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.25rem 2rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 8px 10px 0 rgb(0, 0, 0, 0.2);
+}
+
+.followed-currencies__btn-clear {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  background-color: var(--);
+  color: var(--color-warning-shade);
+  display: flex;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.followed-currencies__btn-clear:hover {
+  transform: scale(1.01)
+}
+
+.modal__button--reject, .modal__button--accept {
+  background-color: var(--);
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.modal__button--reject {
+  color: var(--color-warning);
+  background-color: var(--color-warning-shade);
+}
+
+.modal__button--accept {
+  color: var(--color-success);
+  background-color: var(--color-success-shade);
+}

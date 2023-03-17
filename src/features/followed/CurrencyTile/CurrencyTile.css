@@ -1,15 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-
 .currency-tile--container {
   font-family: "Open Sans", sans-serif;
   padding: 1rem 1.5rem;
-  border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color-shade);
+  background-color: var(--bg-color-lighter);
   border-radius: 99999px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: 1px solid var(--text-color);
   max-width: 450px;
 }
 .currency-tile--header {
@@ -54,18 +51,16 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #014e0e;
-  color: #048f18;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   border: none;
-  font-size: 2rem;
 }
 
-.currency-tile__btn--favorite:hover {
-  background-color: #17441e;
-  color: var(--primary-color);
-}
-.currency-tile__btn--favorite:active {
-  background-color: #aa1111c7;
+.followed {
+  background-color: var(--color-warning);
+  color: var(--color-warning-shade);
+  display: flex;
+  justify-content: center;
 }
 
 .modal__buttons-container {
@@ -73,11 +68,28 @@
   gap: 2rem;
 }
 
-.modal__button--confirm, .modal__button--cancel {
+@media (max-width: 768px) {
+  .currency-tile--container {
+    align-items: flex-start;
+    max-width: none;
+  }
 
-  padding: .25rem 1rem;
-  background-color: #014e0e;
-  color: #048f18;
-  border: none;
-  font-size: 1.5rem;
+  .currency-tile--code,
+  .currency-tile--value {
+    font-size: 1rem;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .currency-tile__details {
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 500px) {
+  .currency-tile__details {
+    min-width: 180px;
+  }
 }

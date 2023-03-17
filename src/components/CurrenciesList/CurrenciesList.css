@@ -1,12 +1,6 @@
 .currencies-list--container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
-  row-gap: 2rem;
-  justify-items: center;
-  align-content: space-between;
-}
-
-.currencies-list__wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
