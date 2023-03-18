@@ -25,8 +25,13 @@ $ cd currencies
 //install dependencies 
 $ npm i
 
-//finally, start the project
-$ npm start
+//finally, start the project in development mode
+$ npm start 
+
+//OR build and preview production env build
+$ npm run build
+
+$ npm run preview
 ```
 
 ## to run tests:
