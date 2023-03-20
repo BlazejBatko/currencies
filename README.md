@@ -3,7 +3,7 @@
 > This repository has 5 branches I created during the development of this app. 
 > My goal was to make it easier for the reviewer to move between the different stages of application development.
 >
-> I would like to add that I am fully aware that this project could have been done in a much simpler way without the use of tools such as `react-router` or `rtk`, but I was keen to show that I am familiar with the react ecosystem.
+> I would like to add that I am fully aware that this project could have been done in a much simpler way without the use of tools such as `react-router` or `rtk`, but I wanted to show that I am familiar with the react ecosystem.
 >
 > I hope you will like my implementation :)
 
